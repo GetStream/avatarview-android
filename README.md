@@ -1,13 +1,14 @@
-<h1 align="center">AvatarView</h1></br>
+<h1 align="center">AvatarView for Android</h1></br>
 
 <p align="center">
-AvatarView supports segmented style images, borders, indicators, and initials.
+AvatarView supports loading profile images with segmented style, borders, indicators, and initials for Android.
 </p><br>
 
 
 <p align="center">
   <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
   <a href="https://android-arsenal.com/api?level=21"><img alt="API" src="https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat"/></a>
+  <a href="https://github.com/GetStream/avatarview-android/actions/workflows/android.yml"><img alt="Build Status" src="https://github.com/GetStream/avatarview-android/actions/workflows/android.yml/badge.svg"/></a>
 </p><br>
 
 <p align="center">
@@ -266,8 +267,8 @@ If you're using your own CDN, you can set the `imageHeadersProvider` on `AvatarC
 ```kotlin
 AvatarCoil.imageHeadersProvider = yourImageHeadersProvider
 ```
-
-<img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="12%"/>
+ <a href="https://getstream.io/tutorials/android-chat/">
+<img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="12%"/></a>
 
 ## Stream Integration
 
@@ -329,12 +330,12 @@ The channel image will be loaded. But if there is no valid channel image, an ima
 | avatarViewPlaceholder                 | Drawable  | A placeholder that should be shown when loading an image     |
 | avatarViewErrorPlaceholder            | Drawable  | An error placeholder that should be shown when request failed |
 
-
+ <a href="https://getstream.io/tutorials/android-chat/"><img src="https://user-images.githubusercontent.com/24237865/146505581-a79e8f7d-6eda-4611-b41a-d60f0189e7d4.jpeg" align="right" /></a>
 
 ## Find this library useful? :heart:
 
-Support it by joining __[stargazers](https://github.com/getStream/AvatarView/stargazers)__ for this repository. :star:
-
+Support it by joining __[stargazers](https://github.com/getStream/avatarview-android/stargazers)__ for this repository. :star: <br>
+Also follow **[Stream](https://twitter.com/getstream_io)** on Twitter for our next creations!
 
 # License
 ```xml
