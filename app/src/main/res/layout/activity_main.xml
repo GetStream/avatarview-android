@@ -9,7 +9,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background">
 
         <io.getstream.avatarview.AvatarView
             android:id="@+id/avatarView1"
@@ -87,7 +88,7 @@
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:layout_margin="20dp"
-            app:avatarViewBorderColor="@color/purple_200"
+            app:avatarViewBorderColor="@color/blue_200"
             app:avatarViewBorderWidth="3dp"
             app:avatarViewErrorPlaceholder="@drawable/stream"
             app:avatarViewIndicatorBorderColor="@color/white"
