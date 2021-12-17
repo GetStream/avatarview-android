@@ -12,7 +12,7 @@ ext {
     if (snapshot) {
         PUBLISH_VERSION = Configuration.snapshotVersionName
     } else {
-        PUBLISH_VERSION = Configuration.versionName + "-beta"
+        PUBLISH_VERSION = Configuration.versionName
     }
     PUBLISH_ARTIFACT_ID = 'avatarview-stream-integration'
 }
