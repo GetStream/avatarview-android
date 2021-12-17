@@ -30,7 +30,7 @@ allprojects {
 And add a dependency code to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
-    implementation "io.getstream.avatarview-coil:1.0.0"
+    implementation "io.getstream:avatarview-coil:1.0.0-beta"
 }
 ```
 
@@ -278,7 +278,7 @@ We're highly recommend using the internal [AvatarView](https://github.com/GetStr
 
 ```gradle
 dependencies {
-    implementation "io.getstream.avatarview-stream-integration:$avatarview_version"
+    implementation "io.getstream:avatarview-stream-integration:$avatarview_version"
 }
 ```
 
