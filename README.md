@@ -1,7 +1,7 @@
-<h1 align="center">AvatarView</h1></br>
+<h1 align="center">AvatarView for Android</h1></br>
 
 <p align="center">
-AvatarView supports loading profile images with segmented style, borders, indicators, and initials.
+AvatarView supports loading profile images with segmented style, borders, indicators, and initials for Android.
 </p><br>
 
 
