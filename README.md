@@ -267,8 +267,8 @@ If you're using your own CDN, you can set the `imageHeadersProvider` on `AvatarC
 ```kotlin
 AvatarCoil.imageHeadersProvider = yourImageHeadersProvider
 ```
-
-<img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="12%"/>
+ <a href="https://getstream.io/tutorials/android-chat/">
+<img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="12%"/></a>
 
 ## Stream Integration
 
@@ -330,12 +330,12 @@ The channel image will be loaded. But if there is no valid channel image, an ima
 | avatarViewPlaceholder                 | Drawable  | A placeholder that should be shown when loading an image     |
 | avatarViewErrorPlaceholder            | Drawable  | An error placeholder that should be shown when request failed |
 
-
+ <a href="https://getstream.io/tutorials/android-chat/"><img src="https://user-images.githubusercontent.com/24237865/146505581-a79e8f7d-6eda-4611-b41a-d60f0189e7d4.jpeg" align="right" /></a>
 
 ## Find this library useful? :heart:
 
-Support it by joining __[stargazers](https://github.com/getStream/AvatarView/stargazers)__ for this repository. :star:
-
+Support it by joining __[stargazers](https://github.com/getStream/avatarview-android/stargazers)__ for this repository. :star: <br>
+Also follow **[Stream](https://twitter.com/getstream_io)** on Twitter for our next creations!
 
 # License
 ```xml
