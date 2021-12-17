@@ -1,9 +1,8 @@
-<h1 align="center">AvatarView for Android</h1></br>
+<h1 align="center">AvatarView</h1></br>
 
 <p align="center">
 AvatarView supports loading profile images with segmented style, borders, indicators, and initials for Android.
 </p><br>
-
 
 <p align="center">
   <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
@@ -17,6 +16,7 @@ AvatarView supports loading profile images with segmented style, borders, indica
 </p>
 
 ## Download
+[![Maven Central](https://img.shields.io/maven-central/v/io.getstream/avatarview.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.getstream%22%20AND%20a:%22stream-chat-android%22)
 
 ### Gradle
 Add the below codes to your **root** `build.gradle` file (not your module build.gradle file).
@@ -30,7 +30,7 @@ allprojects {
 And add a dependency code to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
-    implementation "io.getstream.avatarview-coil:1.0.0"
+    implementation "io.getstream.avatarview-coil:1.0.0-beta"
 }
 ```
 
@@ -271,6 +271,8 @@ AvatarCoil.imageHeadersProvider = yourImageHeadersProvider
 <img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="12%"/></a>
 
 ## Stream Integration
+
+[![Maven Central](https://img.shields.io/maven-central/v/io.getstream/avatarview-stream-integration.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.getstream%22%20AND%20a:%22stream-chat-android%22)
 
 We're highly recommend using the internal [AvatarView](https://github.com/GetStream/stream-chat-android/blob/main/stream-chat-android-ui-components/src/main/kotlin/io/getstream/chat/android/ui/avatar/AvatarView.kt) in the [Stream Chat SDK](https://getstream.io/). However if you'd like to integrate this library with it, you can simply integrate with **Stream Chat SDK** by adding the below dependency:
 
