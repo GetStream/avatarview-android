@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AvatarView">
+        <!-- AvatarView border color -->
+        <attr name="avatarViewBorderColor" format="color|reference" />
+        <!-- AvatarView border radius -->
+        <attr name="avatarViewBorderRadius" format="dimension|reference" />
+        <!-- AvatarView Border width -->
+        <attr name="avatarViewBorderWidth" format="dimension|reference" />
+        <!-- AvatarView initials to be drawn instead of an image -->
+        <attr name="avatarViewInitials" format="string" />
+        <!-- AvatarView initials text size -->
+        <attr name="avatarViewInitialsTextSize" format="dimension" />
+        <!-- AvatarView initials text size ratio following the width size -->
+        <attr name="avatarViewInitialsTextSizeRatio" format="float" />
+        <!-- AvatarView initials text color -->
+        <attr name="avatarViewInitialsTextColor" format="color|reference" />
+        <!-- AvatarView initials background color -->
+        <attr name="avatarViewInitialsBackgroundColor" format="color|reference" />
+        <!-- AvatarView initials text style -->
+        <attr name="avatarViewInitialsTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+        <!-- AvatarView shapes -->
+        <attr name="avatarViewShape" format="enum">
+            <enum name="circle" value="0" />
+            <enum name="rounded_rect" value="1" />
+        </attr>
+        <!-- Sets the visibility of the indicator -->
+        <attr name="avatarViewIndicatorEnabled" format="boolean" />
+        <!-- Sets the position of the indicator -->
+        <attr name="avatarViewIndicatorPosition" format="enum">
+            <enum name="topLeft" value="0" />
+            <enum name="topRight" value="1" />
+            <enum name="bottomLeft" value="2" />
+            <enum name="bottomRight" value="3" />
+        </attr>
+        <!-- Color of the indicator -->
+        <attr name="avatarViewIndicatorColor" format="color|reference" />
+        <!-- Border color of the indicator -->
+        <attr name="avatarViewIndicatorBorderColor" format="color|reference" />
+        <!-- Size criteria of the indicator -->
+        <attr name="avatarViewIndicatorSizeCriteria" format="float" />
+        <!-- Border Size criteria of the indicator -->
+        <attr name="avatarViewIndicatorBorderSizeCriteria" format="float" />
+        <!-- Custom drawable of the indicator -->
+        <attr name="avatarViewIndicatorDrawable" format="reference" />
+        <!-- Supports RTL layout is enabled or not -->
+        <attr name="avatarViewSupportRtlEnabled" format="boolean" />
+        <!-- Sets the maximum section size of the avatar when loading multiple images -->
+        <attr name="avatarViewMaxSectionSize" format="enum">
+            <enum name="one" value="1" />
+            <enum name="two" value="2" />
+            <enum name="three" value="3" />
+            <enum name="four" value="4" />
+        </attr>
+        <!-- A placeholder that should be shown when loading an image -->
+        <attr name="avatarViewPlaceholder" format="reference" />
+        <!-- An error placeholder that should be shown when request failed -->
+        <attr name="avatarViewErrorPlaceholder" format="reference" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,19 @@
+public final class io/getstream/avatarview/glide/AvatarResult$Failure : io/getstream/avatarview/glide/AvatarResult {
+	public fun <init> (Landroid/graphics/drawable/Drawable;)V
+	public final fun getPlaceholder ()Landroid/graphics/drawable/Drawable;
+}
+
+public final class io/getstream/avatarview/glide/AvatarResult$Success : io/getstream/avatarview/glide/AvatarResult {
+	public fun <init> (Landroid/graphics/Bitmap;)V
+	public final fun getBitmap ()Landroid/graphics/Bitmap;
+}
+
+public final class io/getstream/avatarview/glide/AvatarViewExtensionKt {
+	public static final synthetic fun loadImage (Lio/getstream/avatarview/AvatarView;Ljava/lang/Object;Lcom/bumptech/glide/RequestBuilder;)V
+	public static final synthetic fun loadImage (Lio/getstream/avatarview/AvatarView;Ljava/lang/Object;ZLcom/bumptech/glide/request/RequestListener;Lkotlin/jvm/functions/Function0;)V
+	public static final fun loadImage (Lio/getstream/avatarview/AvatarView;Ljava/util/List;Lcom/bumptech/glide/RequestBuilder;)V
+	public static final fun loadImage (Lio/getstream/avatarview/AvatarView;Ljava/util/List;ZLcom/bumptech/glide/request/RequestListener;Lkotlin/jvm/functions/Function0;)V
+	public static synthetic fun loadImage$default (Lio/getstream/avatarview/AvatarView;Ljava/lang/Object;ZLcom/bumptech/glide/request/RequestListener;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
+	public static synthetic fun loadImage$default (Lio/getstream/avatarview/AvatarView;Ljava/util/List;ZLcom/bumptech/glide/request/RequestListener;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)V
+}
+

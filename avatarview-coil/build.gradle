@@ -1,0 +1,68 @@
+import io.getstream.avatarview.Configuration
+import io.getstream.avatarview.Dependencies
+
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'binary-compatibility-validator'
+}
+
+ext {
+    PUBLISH_GROUP_ID = Configuration.artifactGroup
+    if (snapshot) {
+        PUBLISH_VERSION = Configuration.snapshotVersionName
+    } else {
+        PUBLISH_VERSION = Configuration.versionName + "-beta"
+    }
+    PUBLISH_ARTIFACT_ID = 'avatarview-coil'
+}
+
+apply from: "${rootDir}/scripts/publish-module.gradle"
+
+android {
+    compileSdkVersion Configuration.compileSdk
+    defaultConfig {
+        minSdkVersion Configuration.minSdk
+        targetSdkVersion Configuration.targetSdk
+    }
+
+    buildFeatures {
+        buildConfig false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions.freeCompilerArgs += [
+            "-Xexplicit-api=strict",
+            "-Xopt-in=io.getstream.avatarview.internal.InternalAvatarViewApi",
+    ]
+}
+
+apiValidation {
+    nonPublicMarkers += ["kotlin.PublishedApi"]
+}
+
+dependencies {
+    api project(":avatarview")
+    api Dependencies.coil
+    api Dependencies.coilGif
+
+    implementation Dependencies.androidxAppcompat
+    implementation Dependencies.coroutines
+    implementation Dependencies.okhttp
+}
+
+apply from: "$rootDir/spotless.gradle"

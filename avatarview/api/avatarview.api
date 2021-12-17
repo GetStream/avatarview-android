@@ -1,0 +1,80 @@
+public final class io/getstream/avatarview/AvatarBitmapCombiner {
+	public static final field INSTANCE Lio/getstream/avatarview/AvatarBitmapCombiner;
+	public final fun combine (Ljava/util/List;IILandroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;
+	public final fun combine ([Landroid/graphics/Bitmap;IILandroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;
+	public static synthetic fun combine$default (Lio/getstream/avatarview/AvatarBitmapCombiner;Ljava/util/List;IILandroid/graphics/drawable/Drawable;ILjava/lang/Object;)Landroid/graphics/Bitmap;
+	public static synthetic fun combine$default (Lio/getstream/avatarview/AvatarBitmapCombiner;[Landroid/graphics/Bitmap;IILandroid/graphics/drawable/Drawable;ILjava/lang/Object;)Landroid/graphics/Bitmap;
+	public final fun drawableToBitmap (Landroid/graphics/drawable/Drawable;I)Landroid/graphics/Bitmap;
+}
+
+public final class io/getstream/avatarview/AvatarShape : java/lang/Enum {
+	public static final field CIRCLE Lio/getstream/avatarview/AvatarShape;
+	public static final field ROUNDED_RECT Lio/getstream/avatarview/AvatarShape;
+	public final fun getValue ()I
+	public static fun valueOf (Ljava/lang/String;)Lio/getstream/avatarview/AvatarShape;
+	public static fun values ()[Lio/getstream/avatarview/AvatarShape;
+}
+
+public final class io/getstream/avatarview/AvatarView : androidx/appcompat/widget/AppCompatImageView, kotlinx/coroutines/CoroutineScope {
+	public fun <init> (Landroid/content/Context;)V
+	public fun <init> (Landroid/content/Context;Landroid/util/AttributeSet;)V
+	public fun <init> (Landroid/content/Context;Landroid/util/AttributeSet;I)V
+	public synthetic fun <init> (Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getAvatarBorderColor ()I
+	public final fun getAvatarBorderRadius ()F
+	public final fun getAvatarBorderWidth ()I
+	public final fun getAvatarInitials ()Ljava/lang/String;
+	public final fun getAvatarInitialsBackgroundColor ()I
+	public final fun getAvatarInitialsStyle ()I
+	public final fun getAvatarInitialsTextColor ()I
+	public final fun getAvatarInitialsTextSize ()I
+	public final fun getAvatarInitialsTextSizeRatio ()F
+	public final fun getAvatarShape ()Lio/getstream/avatarview/AvatarShape;
+	public fun getCoroutineContext ()Lkotlin/coroutines/CoroutineContext;
+	public final fun getErrorPlaceholder ()Landroid/graphics/drawable/Drawable;
+	public final fun getIndicatorBorderColor ()I
+	public final fun getIndicatorBorderSizeCriteria ()F
+	public final fun getIndicatorColor ()I
+	public final fun getIndicatorDrawable ()Landroid/graphics/drawable/Drawable;
+	public final fun getIndicatorEnabled ()Z
+	public final fun getIndicatorPosition ()Lio/getstream/avatarview/IndicatorPosition;
+	public final fun getIndicatorSizeCriteria ()F
+	public final fun getMaxSectionSize ()I
+	public final fun getPlaceholder ()Landroid/graphics/drawable/Drawable;
+	public final fun getSupportRtlEnabled ()Z
+	public final fun setAvatarBorderColor (I)V
+	public final fun setAvatarBorderRadius (F)V
+	public final fun setAvatarBorderWidth (I)V
+	public final fun setAvatarInitials (Ljava/lang/String;)V
+	public final fun setAvatarInitialsBackgroundColor (I)V
+	public final fun setAvatarInitialsStyle (I)V
+	public final fun setAvatarInitialsTextColor (I)V
+	public final fun setAvatarInitialsTextSize (I)V
+	public final fun setAvatarInitialsTextSizeRatio (F)V
+	public final fun setAvatarShape (Lio/getstream/avatarview/AvatarShape;)V
+	public final fun setErrorPlaceholder (Landroid/graphics/drawable/Drawable;)V
+	public final fun setIndicatorBorderColor (I)V
+	public final fun setIndicatorBorderSizeCriteria (F)V
+	public final fun setIndicatorColor (I)V
+	public final fun setIndicatorDrawable (Landroid/graphics/drawable/Drawable;)V
+	public final fun setIndicatorEnabled (Z)V
+	public final fun setIndicatorPosition (Lio/getstream/avatarview/IndicatorPosition;)V
+	public final fun setIndicatorRes (I)V
+	public final fun setIndicatorSizeCriteria (F)V
+	public final fun setMaxSectionSize (I)V
+	public final fun setPlaceholder (Landroid/graphics/drawable/Drawable;)V
+	public final fun setSupportRtlEnabled (Z)V
+}
+
+public final class io/getstream/avatarview/IndicatorPosition : java/lang/Enum {
+	public static final field BOTTOM_LEFT Lio/getstream/avatarview/IndicatorPosition;
+	public static final field BOTTOM_RIGHT Lio/getstream/avatarview/IndicatorPosition;
+	public static final field TOP_LEFT Lio/getstream/avatarview/IndicatorPosition;
+	public static final field TOP_RIGHT Lio/getstream/avatarview/IndicatorPosition;
+	public static fun valueOf (Ljava/lang/String;)Lio/getstream/avatarview/IndicatorPosition;
+	public static fun values ()[Lio/getstream/avatarview/IndicatorPosition;
+}
+
+public abstract interface annotation class io/getstream/avatarview/internal/InternalAvatarViewApi : java/lang/annotation/Annotation {
+}
+
