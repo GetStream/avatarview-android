@@ -10,6 +10,7 @@ AvatarView supports segmented style images, borders, indicators, and initials.
 <p align="center">
   <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
   <a href="https://android-arsenal.com/api?level=21"><img alt="API" src="https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat"/></a>
+  <a href="https://github.com/GetStream/avatarview-android/actions/workflows/android.yml"><img alt="Build Status" src="https://github.com/GetStream/avatarview-android/actions/workflows/android.yml/badge.svg"/></a>
 </p><br>
 
 <p align="center">
@@ -18,6 +19,7 @@ AvatarView supports segmented style images, borders, indicators, and initials.
 </p>
 
 ## Download
+[![Maven Central](https://img.shields.io/maven-central/v/io.getstream/avatarview-glide.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.getstream%22%20AND%20a:%22stream-chat-android%22)
 
 ### Gradle
 Add the below codes to your **root** `build.gradle` file (not your module build.gradle file).
@@ -31,7 +33,7 @@ allprojects {
 And add a dependency code to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
-    implementation "io.getstream.avatarview-glide:$version_avatarview"
+    implementation "io.getstream:avatarview-glide:$version_avatarview"
 }
 ```
 
