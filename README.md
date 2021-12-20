@@ -1,7 +1,7 @@
 <h1 align="center">AvatarView</h1></br>
 
 <p align="center">
-AvatarView supports loading profile images with segmented style, borders, indicators, and initials for Android.
+AvatarView supports loading profile images with fractional style, borders, indicators, and initials for Android.
 </p><br>
 
 <p align="center">
@@ -92,9 +92,9 @@ avatarView.loadImage(
 
 <img src="/preview/preview2.png" width="32%" align="right"/>
 
-### Loading Segmented Style Image
+### Loading Images with Fractional Style
 
-`AvatarView` supports loading up to four images with the segmented style as in the example below:
+`AvatarView` supports loading up to four images with the fractional style as in the example below:
 
 ```kotlin
 avatarView.loadImage(
@@ -108,7 +108,7 @@ We can set the maximum section size of the avatar when we load multiple images b
 app:avatarViewMaxSectionSize="4"
 ```
 
-The default value is 4, and you can set the segmentation styles on your taste.
+The default value is 4, and you can set the fractional formats to your taste.
 
 <img src="/preview/preview5.png" width="32%" align="right"/>
 
