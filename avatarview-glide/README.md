@@ -14,8 +14,9 @@ AvatarView supports loading profile images with fractional style, borders, indic
 </p><br>
 
 <p align="center">
-<img src="/preview/preview0.png" width="32%"/>
-<img src="/preview/preview1.png" width="32%"/>
+<img src="/preview/preview7.gif" width="32%"/>
+<img src="https://user-images.githubusercontent.com/24237865/146585515-a10a7446-fa47-4e34-9813-89b14177793d.png" width="32.3%"/>
+<img src="https://user-images.githubusercontent.com/24237865/146585501-889b031c-55d1-4822-9d25-1d2c8ff8bd67.png" width="32.3%"/>
 </p>
 
 ## Download
@@ -37,7 +38,7 @@ dependencies {
 }
 ```
 
-The `io.getstream.avatarview-glide` dependency includes [Glide](https://github.com/bumptech/glide) to load images internally. So if you're using Coil in your project, please make sure you project is using the same Glide version or exclude Glide dependencies to adapt yours.
+The `io.getstream.avatarview-glide` dependency includes [Glide](https://github.com/bumptech/glide) to load images internally. So if you're using Glide in your project, please make sure your project is using the same Glide version or exclude Glide dependencies to adapt yours.
 
 ## Usage
 
