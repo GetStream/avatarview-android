@@ -3,12 +3,13 @@
 <p align="center">
 AvatarView supports loading profile images with fractional style, borders, indicators, and initials for Android.
 </p><br>
-
 <p align="center">
   <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
   <a href="https://android-arsenal.com/api?level=21"><img alt="API" src="https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat"/></a>
   <a href="https://github.com/GetStream/avatarview-android/actions/workflows/android.yml"><img alt="Build Status" src="https://github.com/GetStream/avatarview-android/actions/workflows/android.yml/badge.svg"/></a>
+  <a href="https://androidweekly.net/issues/issue-498"><img alt="Android Weekly" src="https://skydoves.github.io/badges/android-weekly.svg"/></a>
 </p><br>
+
 
 <p align="center">
 <img src="/preview/preview7.gif" width="32%"/>
@@ -35,9 +36,9 @@ dependencies {
 }
 ```
 
->  **Note:** The `io.getstream.avatarview-coil` dependency includes [Coil](https://github.com/coil-kt/coil) to load images internally. So if you're using Coil in your project, please make sure you project is using the same Coil version or exclude Coil dependencies to adapt yours.
+>  **Note:** The `io.getstream.avatarview-coil` dependency includes [Coil](https://github.com/coil-kt/coil) to load images internally. So if you're using Coil in your project, please make sure your project is using the same Coil version or exclude Coil dependencies to adapt yours.
 
-We're highly recommend using **AvatarView-Coil** to load images. However, if you'd more prefer to use [Glide](https://github.com/bumptech/glide), you can use [AvatarView-Glide](/avatarview-glide/README.md) instead.
+We highly recommend using **AvatarView-Coil** to load images. However, if you'd more prefer to use [Glide](https://github.com/bumptech/glide), you can use [AvatarView-Glide](/avatarview-glide/README.md) instead.
 
 ## Usage
 
