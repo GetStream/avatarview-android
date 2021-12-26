@@ -269,6 +269,12 @@ If you're using your own CDN, you can set the `imageHeadersProvider` on `AvatarC
 ```kotlin
 AvatarCoil.imageHeadersProvider = yourImageHeadersProvider
 ```
+
+## AvatarView with Glide
+We highly recommend using **AvatarView-Coil** to load images if possible. However, you can also use [Glide](https://github.com/bumptech/glide) instead.
+
+> 👉 Check out [AvatarView-Glide](/avatarview-glide/README.md).
+
  <a href="https://getstream.io/tutorials/android-chat/">
 <img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="12%"/></a>
 
