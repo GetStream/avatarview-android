@@ -29,7 +29,7 @@ allprojects {
     }
 }
 ```
-And add a dependency code to your **module**'s `build.gradle` file.
+Next, add the below dependency to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
     implementation "io.getstream:avatarview-coil:1.0.0"
@@ -282,7 +282,7 @@ We highly recommend using **AvatarView-Coil** to load images if possible. Howeve
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.getstream/avatarview-stream-integration.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.getstream%22%20AND%20a:%22stream-chat-android%22)
 
-We're highly recommend using the internal [AvatarView](https://github.com/GetStream/stream-chat-android/blob/main/stream-chat-android-ui-components/src/main/kotlin/io/getstream/chat/android/ui/avatar/AvatarView.kt) in the [Stream Chat SDK](https://getstream.io/). However if you'd like to integrate this library with it, you can simply integrate with **Stream Chat SDK** by adding the below dependency:
+AvatarView supports integrating features with [Stream Chat SDK](https://getstream.io/). First, You can simply integrate with **Stream Chat SDK** by adding the dependency below:
 
 ```gradle
 dependencies {
@@ -296,7 +296,7 @@ Next, you should set the `StreamAvatarBitmapFactory` on the `AvatarCoil` as in t
 AvatarCoil.setAvatarBitmapFactory(StreamAvatarBitmapFactory(context))
 ```
 
-Basically, it will load the `image` extra data of the `User`. But if there's no valid image data, the initials by the `name` will be drawn.
+Basically, it will load the `image` extra data of the `User`. But if there's no valid image data, the initials from the `name` will be loaded.
 
 <img src="/preview/preview6.png" width="32%" align="right"/>
 
@@ -337,15 +337,15 @@ The channel image will be loaded. But if there is no valid channel image, an ima
 | avatarViewIndicatorBorderSizeCriteria | float     | Border Size criteria of the indicator                        |
 | avatarViewSupportRtlEnabled           | boolean   | Supports RTL layout is enabled or not                        |
 | avatarViewMaxSectionSize              | enum      | The maximum section size of the avatar when loading multiple images |
-| avatarViewPlaceholder                 | Drawable  | A placeholder that should be shown when loading an image     |
-| avatarViewErrorPlaceholder            | Drawable  | An error placeholder that should be shown when request failed |
+| avatarViewPlaceholder                 | drawable  | A placeholder that should be shown when loading an image     |
+| avatarViewErrorPlaceholder            | drawable  | An error placeholder that should be shown when request failed |
 
  <a href="https://getstream.io/tutorials/android-chat/"><img src="https://user-images.githubusercontent.com/24237865/146505581-a79e8f7d-6eda-4611-b41a-d60f0189e7d4.jpeg" align="right" /></a>
 
 ## Find this library useful? :heart:
 
 Support it by joining __[stargazers](https://github.com/getStream/avatarview-android/stargazers)__ for this repository. :star: <br>
-Also follow **[Stream](https://twitter.com/getstream_io)** on Twitter for our next creations!
+Also, follow **[Stream](https://twitter.com/getstream_io)** on Twitter for our next creations!
 
 # License
 ```xml

@@ -1,6 +1,6 @@
 
 
-<h1 align="center">AvatarView</h1></br>
+<h1 align="center">AvatarView-Glide</h1></br>
 
 <p align="center">
 AvatarView supports loading profile images with fractional style, borders, indicators, and initials for Android.
@@ -33,7 +33,7 @@ allprojects {
     }
 }
 ```
-And add a dependency code to your **module**'s `build.gradle` file.
+Next, add the below dependency to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
     implementation "io.getstream:avatarview-glide:$version_avatarview"
@@ -175,8 +175,6 @@ avatarView.loadImage(
           })
 )
 ```
-
-
 
 ```xml
 Copyright 2021 Stream.IO, Inc. All Rights Reserved.
