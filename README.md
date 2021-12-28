@@ -10,7 +10,7 @@ AvatarView supports loading profile images with fractional style, borders, indic
   <a href="https://androidweekly.net/issues/issue-498"><img alt="Android Weekly" src="https://skydoves.github.io/badges/android-weekly.svg"/></a>
 </p><br>
 
-
+## Preview
 <p align="center">
 <img src="/preview/preview7.gif" width="32%"/>
 <img src="https://user-images.githubusercontent.com/24237865/146585515-a10a7446-fa47-4e34-9813-89b14177793d.png" width="32.3%"/>
@@ -346,6 +346,10 @@ The channel image will be loaded. But if there is no valid channel image, an ima
 
 Support it by joining __[stargazers](https://github.com/getStream/avatarview-android/stargazers)__ for this repository. :star: <br>
 Also, follow **[Stream](https://twitter.com/getstream_io)** on Twitter for our next creations!
+
+<a href="https://getstream.io/chat/sdk/android/">
+  <img src="https://user-images.githubusercontent.com/24237865/147577438-2d1c3dd2-a3bc-4014-9ec1-6095fbdab194.png" width="100%" />
+</a>
 
 # License
 ```xml
