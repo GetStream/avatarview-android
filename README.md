@@ -40,6 +40,31 @@ dependencies {
 
 We highly recommend using **AvatarView-Coil** to load images. However, if you'd more prefer to use [Glide](https://github.com/bumptech/glide), you can use [AvatarView-Glide](/avatarview-glide/README.md) instead.
 
+## SNAPSHOT 
+
+<details>
+ <summary>See how to import the snapshot</summary>
+
+### Including the SNAPSHOT
+Snapshots of the current development version of AvatarView are available, which track [the latest versions](https://oss.sonatype.org/content/repositories/snapshots/io/getstream/avatarview/).
+
+To import snapshot versions on your project, add the code snippet below on your gradle file.
+```Gradle
+repositories {
+   maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+}
+```
+
+Next, add the below dependency to your **module**'s `build.gradle` file.
+```gradle
+dependencies {
+    implementation "io.getstream:avatarview-coil:1.0.1-SNAPSHOT"
+    implementation "io.getstream:avatarview-glide:1.0.1-SNAPSHOT"
+}
+```
+
+</details>
+
 ## Usage
 
 First, add the following XML namespace inside your XML layout file.
