@@ -20,6 +20,7 @@
 package io.getstream.avatarview.coil
 
 import coil.request.ImageRequest
+import coil.request.ImageResult
 import coil.transform.CircleCropTransformation
 import coil.transform.RoundedCornersTransformation
 import coil.transform.Transformation
@@ -31,7 +32,9 @@ import io.getstream.avatarview.AvatarView
  *
  * @param data An image data to be loaded.
  * @param onStart A lambda function will be executed when start requesting.
- * @param onComplete A lambda function will be executed when finish loading.
+ * @param onComplete A lambda function will be executed when loading finished.
+ * @param onSuccess A lambda function will be executed when loading succeeds.
+ * @param onError A lambda function will be executed when loading failed.
  * @param builder A receiver to be applied with the [ImageRequest.Builder].
  */
 @JvmSynthetic
@@ -39,6 +42,8 @@ public inline fun AvatarView.loadImage(
     data: Any?,
     crossinline onStart: () -> Unit = {},
     crossinline onComplete: () -> Unit = {},
+    noinline onSuccess: (request: ImageRequest, metadata: ImageResult.Metadata) -> Unit = { _, _ -> },
+    noinline onError: (request: ImageRequest, throwable: Throwable) -> Unit = { _, _ -> },
     builder: ImageRequest.Builder.() -> Unit = {}
 ) {
     loadPlaceholder()
@@ -48,7 +53,9 @@ public inline fun AvatarView.loadImage(
             data = listOf(data),
             maxSectionSize = maxSectionSize,
             avatarBorderWidth = avatarBorderWidth,
-            errorPlaceholder = errorPlaceholder
+            errorPlaceholder = errorPlaceholder,
+            onSuccess = onSuccess,
+            onError = onError
         ),
         transformation = transformation,
         onStart = onStart,
@@ -64,6 +71,8 @@ public inline fun AvatarView.loadImage(
  * @param data A list of image data to be loaded.
  * @param onStart A lambda function will be executed when start requesting.
  * @param onComplete A lambda function will be executed when finish loading.
+ * @param onSuccess A lambda function will be executed when loading succeeds.
+ * @param onError A lambda function will be executed when loading failed.
  * @param builder A receiver to be applied with the [ImageRequest.Builder].
  */
 @JvmSynthetic
@@ -71,6 +80,8 @@ public inline fun AvatarView.loadImage(
     data: List<Any?>,
     crossinline onStart: () -> Unit = {},
     crossinline onComplete: () -> Unit = {},
+    noinline onSuccess: (request: ImageRequest, metadata: ImageResult.Metadata) -> Unit = { _, _ -> },
+    noinline onError: (request: ImageRequest, throwable: Throwable) -> Unit = { _, _ -> },
     builder: ImageRequest.Builder.() -> Unit = {}
 ) {
     loadPlaceholder()
@@ -80,7 +91,9 @@ public inline fun AvatarView.loadImage(
             data = data,
             maxSectionSize = maxSectionSize,
             avatarBorderWidth = avatarBorderWidth,
-            errorPlaceholder = errorPlaceholder
+            errorPlaceholder = errorPlaceholder,
+            onSuccess = onSuccess,
+            onError = onError
         ),
         transformation = transformation,
         onStart = onStart,
@@ -96,6 +109,8 @@ public inline fun AvatarView.loadImage(
  * @param data A vararg of image data to be loaded.
  * @param onStart A lambda function will be executed when start requesting.
  * @param onComplete A lambda function will be executed when finish loading.
+ * @param onSuccess A lambda function will be executed when loading succeeds.
+ * @param onError A lambda function will be executed when loading failed.
  * @param builder A receiver to be applied with the [ImageRequest.Builder].
  */
 @JvmSynthetic
@@ -103,6 +118,8 @@ public inline fun AvatarView.loadImage(
     vararg data: Any?,
     crossinline onStart: () -> Unit = {},
     crossinline onComplete: () -> Unit = {},
+    noinline onSuccess: (request: ImageRequest, metadata: ImageResult.Metadata) -> Unit = { _, _ -> },
+    noinline onError: (request: ImageRequest, throwable: Throwable) -> Unit = { _, _ -> },
     builder: ImageRequest.Builder.() -> Unit = {}
 ) {
     loadPlaceholder()
@@ -110,6 +127,8 @@ public inline fun AvatarView.loadImage(
         data = data.toList(),
         onStart = onStart,
         onComplete = onComplete,
+        onSuccess = onSuccess,
+        onError = onError,
         builder = builder
     )
 }
