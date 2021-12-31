@@ -1,8 +1,8 @@
 package io.getstream.avatarview
 
 object Versions {
-    internal const val ANDROID_GRADLE_PLUGIN = "7.1.0-beta04"
-    internal const val ANDROID_GRADLE_SPOTLESS = "5.15.0"
+    internal const val ANDROID_GRADLE_PLUGIN = "7.1.0-beta05"
+    internal const val ANDROID_GRADLE_SPOTLESS = "6.1.0"
     internal const val GRADLE_NEXUS_PUBLISH_PLUGIN = "1.1.0"
     internal const val KOTLIN = "1.6.0"
     public const val KOTLIN_GRADLE_KTLINT = "0.41.0"
