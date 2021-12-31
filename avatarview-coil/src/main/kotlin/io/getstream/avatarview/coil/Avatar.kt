@@ -20,6 +20,8 @@ import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import androidx.annotation.DrawableRes
+import coil.request.ImageRequest
+import coil.request.ImageResult
 import okhttp3.HttpUrl
 import java.io.File
 
@@ -53,7 +55,13 @@ public data class Avatar(
     val avatarBorderWidth: Int,
 
     /** An error placeholder that should be shown when request failed. */
-    val errorPlaceholder: Drawable?
+    val errorPlaceholder: Drawable?,
+
+    /** A lambda function will be executed when loading succeeds. */
+    val onSuccess: (request: ImageRequest, metadata: ImageResult.Metadata) -> Unit,
+
+    /** A lambda function will be executed when loading failed. */
+    val onError: (request: ImageRequest, throwable: Throwable) -> Unit,
 ) {
     private val bagOfTags: MutableMap<String, Any> = mutableMapOf()
 

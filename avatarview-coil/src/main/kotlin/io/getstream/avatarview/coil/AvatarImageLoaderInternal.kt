@@ -21,6 +21,7 @@ import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import coil.loadAny
 import coil.request.ImageRequest
+import coil.request.ImageResult
 import coil.transform.CircleCropTransformation
 import coil.transform.Transformation
 import io.getstream.avatarview.AvatarView
@@ -42,6 +43,8 @@ public object AvatarImageLoaderInternal {
      *
      * @param context A context to build [ImageRequest].
      * @param data An image [data].
+     * @param onSuccess A lambda function will be executed when loading succeeds.
+     * @param onError A lambda function will be executed when loading failed.
      *
      * @return The loaded bitmap or null if the loading failed (e.g. network issues).
      */
@@ -49,10 +52,13 @@ public object AvatarImageLoaderInternal {
     public suspend fun loadAsBitmap(
         context: Context,
         data: Any?,
+        onSuccess: (request: ImageRequest, metadata: ImageResult.Metadata) -> Unit = { _, _ -> },
+        onError: (request: ImageRequest, throwable: Throwable) -> Unit = { _, _ -> },
     ): Bitmap? = withContext(Dispatchers.IO) {
         val imageResult = context.avatarImageLoader.execute(
             ImageRequest.Builder(context)
                 .headers(AvatarCoil.imageHeadersProvider.getImageRequestHeaders().toHeaders())
+                .listener(onSuccess = onSuccess, onError = onError)
                 .data(data)
                 .build()
         )

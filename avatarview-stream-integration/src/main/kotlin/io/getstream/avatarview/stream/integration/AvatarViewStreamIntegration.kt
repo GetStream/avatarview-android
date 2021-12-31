@@ -50,7 +50,9 @@ public fun AvatarView.setUserData(
             data = listOf(user.model),
             maxSectionSize = maxSectionSize,
             avatarBorderWidth = avatarBorderWidth,
-            errorPlaceholder = errorPlaceholder
+            errorPlaceholder = errorPlaceholder,
+            onSuccess = { _, _ -> },
+            onError = { _, _ -> },
         ).also {
             it.putInitialStylesOnBag(this, user)
         }
@@ -78,7 +80,9 @@ public fun AvatarView.setChannelData(channel: Channel, errorPlaceholder: Drawabl
                     data = otherUsers.map { it.model },
                     maxSectionSize = maxSectionSize,
                     avatarBorderWidth = avatarBorderWidth,
-                    errorPlaceholder = errorPlaceholder
+                    errorPlaceholder = errorPlaceholder,
+                    onSuccess = { _, _ -> },
+                    onError = { _, _ -> },
                 ).also {
                     it.putInitialStylesOnBag(this@setChannelData, channel)
                 }

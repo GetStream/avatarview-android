@@ -102,7 +102,9 @@ public open class AvatarBitmapFactory(private val context: Context) {
     ): Bitmap? {
         return AvatarImageLoaderInternal.loadAsBitmap(
             context = context,
-            data = data
+            data = data,
+            onSuccess = avatar.onSuccess,
+            onError = avatar.onError
         )
     }
 
