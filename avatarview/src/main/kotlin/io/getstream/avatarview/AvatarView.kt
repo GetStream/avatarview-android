@@ -22,6 +22,7 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
+import android.graphics.SweepGradient
 import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
@@ -32,8 +33,10 @@ import androidx.annotation.Px
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.core.content.res.ResourcesCompat
 import io.getstream.avatarview.internal.InternalAvatarViewApi
+import io.getstream.avatarview.internal.arrayPositions
 import io.getstream.avatarview.internal.dp
 import io.getstream.avatarview.internal.getEnum
+import io.getstream.avatarview.internal.getIntArray
 import io.getstream.avatarview.internal.internalBlue
 import io.getstream.avatarview.internal.internalGreen
 import io.getstream.avatarview.internal.isRtlLayout
@@ -71,6 +74,9 @@ public class AvatarView @JvmOverloads constructor(
     /** The border color of AvatarView. */
     @get:ColorInt
     public var avatarBorderColor: Int by viewProperty(Color.WHITE)
+
+    /** The border color of AvatarView. */
+    public var avatarBorderColorArray: IntArray by viewProperty(intArrayOf())
 
     /** The border radius of AvatarView. */
     @get:Px
@@ -160,6 +166,9 @@ public class AvatarView @JvmOverloads constructor(
                 )
                 avatarBorderColor = typedArray.getColor(
                     R.styleable.AvatarView_avatarViewBorderColor, avatarBorderColor
+                )
+                avatarBorderColorArray = typedArray.getIntArray(
+                    R.styleable.AvatarView_avatarViewBorderColorArray, intArrayOf()
                 )
                 avatarBorderRadius = typedArray.getDimension(
                     R.styleable.AvatarView_avatarViewBorderRadius,
@@ -286,14 +295,26 @@ public class AvatarView @JvmOverloads constructor(
                 height.toFloat() - BORDER_OFFSET,
                 avatarBorderRadius,
                 avatarBorderRadius,
-                borderPaint
+                borderPaint.applyGradientShader()
             )
         } else {
             canvas.drawCircle(
                 width / 2f,
                 height / 2f,
                 width / 2f - avatarBorderWidth / 2,
-                borderPaint
+                borderPaint.applyGradientShader()
+            )
+        }
+    }
+
+    /** Apply gradient shader to a [Paint]. */
+    private fun Paint.applyGradientShader(): Paint = apply {
+        if (avatarBorderColorArray.isNotEmpty()) {
+            shader = SweepGradient(
+                width / 2f,
+                height / 2f,
+                avatarBorderColorArray,
+                avatarBorderColorArray.arrayPositions
             )
         }
     }
