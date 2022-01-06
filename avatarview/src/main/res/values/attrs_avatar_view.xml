@@ -3,6 +3,8 @@
     <declare-styleable name="AvatarView">
         <!-- AvatarView border color -->
         <attr name="avatarViewBorderColor" format="color|reference" />
+        <!-- AvatarView border color array -->
+        <attr name="avatarViewBorderColorArray" format="reference" />
         <!-- AvatarView border radius -->
         <attr name="avatarViewBorderRadius" format="dimension|reference" />
         <!-- AvatarView Border width -->
