@@ -40,6 +40,14 @@ internal inline fun <reified T : Enum<T>> TypedArray.getEnum(index: Int, default
     }
 }
 
+/** Returns an array of Int the corresponding resource id. */
+@JvmSynthetic
+internal fun TypedArray.getIntArray(resourceId: Int, default: IntArray): IntArray {
+    return getResourceId(resourceId, -1).let {
+        if (it >= 0) resources.getIntArray(it) else default
+    }
+}
+
 /** Extension scope function for [TypedArray]. */
 @JvmSynthetic
 internal inline fun TypedArray.use(block: (TypedArray) -> Unit) {
@@ -65,3 +73,14 @@ internal val String.parseInitials: String
 /** Returns a view is RTL layout or not. */
 internal val View.isRtlLayout: Boolean
     @JvmSynthetic get() = ViewCompat.getLayoutDirection(this) == ViewCompat.LAYOUT_DIRECTION_RTL
+
+/** Returns an array of Shader positions from the int array. */
+internal val IntArray.arrayPositions: FloatArray
+    @JvmSynthetic inline get() {
+        val positions = arrayListOf(0f)
+        val interval = 1.0f / this.size
+        for (i in 1 until size) {
+            positions.add(positions[i - 1] + interval)
+        }
+        return positions.toFloatArray()
+    }
