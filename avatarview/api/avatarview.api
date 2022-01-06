@@ -21,6 +21,7 @@ public final class io/getstream/avatarview/AvatarView : androidx/appcompat/widge
 	public fun <init> (Landroid/content/Context;Landroid/util/AttributeSet;I)V
 	public synthetic fun <init> (Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun getAvatarBorderColor ()I
+	public final fun getAvatarBorderColorArray ()[I
 	public final fun getAvatarBorderRadius ()F
 	public final fun getAvatarBorderWidth ()I
 	public final fun getAvatarInitials ()Ljava/lang/String;
@@ -33,6 +34,7 @@ public final class io/getstream/avatarview/AvatarView : androidx/appcompat/widge
 	public fun getCoroutineContext ()Lkotlin/coroutines/CoroutineContext;
 	public final fun getErrorPlaceholder ()Landroid/graphics/drawable/Drawable;
 	public final fun getIndicatorBorderColor ()I
+	public final fun getIndicatorBorderColorArray ()[I
 	public final fun getIndicatorBorderSizeCriteria ()F
 	public final fun getIndicatorColor ()I
 	public final fun getIndicatorDrawable ()Landroid/graphics/drawable/Drawable;
@@ -43,6 +45,7 @@ public final class io/getstream/avatarview/AvatarView : androidx/appcompat/widge
 	public final fun getPlaceholder ()Landroid/graphics/drawable/Drawable;
 	public final fun getSupportRtlEnabled ()Z
 	public final fun setAvatarBorderColor (I)V
+	public final fun setAvatarBorderColorArray ([I)V
 	public final fun setAvatarBorderRadius (F)V
 	public final fun setAvatarBorderWidth (I)V
 	public final fun setAvatarInitials (Ljava/lang/String;)V
@@ -54,6 +57,7 @@ public final class io/getstream/avatarview/AvatarView : androidx/appcompat/widge
 	public final fun setAvatarShape (Lio/getstream/avatarview/AvatarShape;)V
 	public final fun setErrorPlaceholder (Landroid/graphics/drawable/Drawable;)V
 	public final fun setIndicatorBorderColor (I)V
+	public final fun setIndicatorBorderColorArray ([I)V
 	public final fun setIndicatorBorderSizeCriteria (F)V
 	public final fun setIndicatorColor (I)V
 	public final fun setIndicatorDrawable (Landroid/graphics/drawable/Drawable;)V

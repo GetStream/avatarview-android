@@ -345,6 +345,7 @@ The channel image will be loaded. But if there is no valid channel image, an ima
 | Attributes                            | Type      | Description                                                  |
 | ------------------------------------- | --------- | ------------------------------------------------------------ |
 | avatarViewBorderColor                 | color     | AvatarView border color                                      |
+| avatarViewBorderColorArray            | array     | AvatarView border color array                                |
 | avatarViewBorderRadius                | dimension | AvatarView border radius                                     |
 | avatarViewBorderWidth                 | dimension | AvatarView Border width                                      |
 | avatarViewInitials                    | string    | AvatarView initials to be drawn instead of an image          |
@@ -358,6 +359,7 @@ The channel image will be loaded. But if there is no valid channel image, an ima
 | avatarViewIndicatorPosition           | enum      | Sets the position of the indicator                           |
 | avatarViewIndicatorColor              | color     | Color of the indicator                                       |
 | avatarViewIndicatorBorderColor        | color     | Border color of the indicator                                |
+| avatarViewIndicatorBorderColorArray   | array     | Border color array of the indicator                          |
 | avatarViewIndicatorSizeCriteria       | float     | Size criteria of the indicator                               |
 | avatarViewIndicatorBorderSizeCriteria | float     | Border Size criteria of the indicator                        |
 | avatarViewSupportRtlEnabled           | boolean   | Supports RTL layout is enabled or not                        |

@@ -22,6 +22,7 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
+import android.graphics.SweepGradient
 import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
@@ -32,8 +33,10 @@ import androidx.annotation.Px
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.core.content.res.ResourcesCompat
 import io.getstream.avatarview.internal.InternalAvatarViewApi
+import io.getstream.avatarview.internal.arrayPositions
 import io.getstream.avatarview.internal.dp
 import io.getstream.avatarview.internal.getEnum
+import io.getstream.avatarview.internal.getIntArray
 import io.getstream.avatarview.internal.internalBlue
 import io.getstream.avatarview.internal.internalGreen
 import io.getstream.avatarview.internal.isRtlLayout
@@ -71,6 +74,9 @@ public class AvatarView @JvmOverloads constructor(
     /** The border color of AvatarView. */
     @get:ColorInt
     public var avatarBorderColor: Int by viewProperty(Color.WHITE)
+
+    /** The border color array of AvatarView. */
+    public var avatarBorderColorArray: IntArray by viewProperty(intArrayOf())
 
     /** The border radius of AvatarView. */
     @get:Px
@@ -114,6 +120,9 @@ public class AvatarView @JvmOverloads constructor(
     /** The border color of the indicator. */
     @get:ColorInt
     public var indicatorBorderColor: Int by viewProperty(Color.WHITE)
+
+    /** The border color array of the indicator. */
+    public var indicatorBorderColorArray: IntArray by viewProperty(intArrayOf())
 
     /** The size criteria of the indicator. */
     public var indicatorSizeCriteria: Float by viewProperty(8f)
@@ -161,6 +170,9 @@ public class AvatarView @JvmOverloads constructor(
                 avatarBorderColor = typedArray.getColor(
                     R.styleable.AvatarView_avatarViewBorderColor, avatarBorderColor
                 )
+                avatarBorderColorArray = typedArray.getIntArray(
+                    R.styleable.AvatarView_avatarViewBorderColorArray, intArrayOf()
+                )
                 avatarBorderRadius = typedArray.getDimension(
                     R.styleable.AvatarView_avatarViewBorderRadius,
                     avatarBorderRadius
@@ -206,6 +218,10 @@ public class AvatarView @JvmOverloads constructor(
                 indicatorBorderColor = typedArray.getColor(
                     R.styleable.AvatarView_avatarViewIndicatorBorderColor,
                     indicatorBorderColor
+                )
+                indicatorBorderColorArray = typedArray.getIntArray(
+                    R.styleable.AvatarView_avatarViewIndicatorBorderColorArray,
+                    indicatorBorderColorArray
                 )
                 indicatorSizeCriteria = typedArray.getFloat(
                     R.styleable.AvatarView_avatarViewIndicatorSizeCriteria,
@@ -286,14 +302,14 @@ public class AvatarView @JvmOverloads constructor(
                 height.toFloat() - BORDER_OFFSET,
                 avatarBorderRadius,
                 avatarBorderRadius,
-                borderPaint
+                borderPaint.applyGradientShader(avatarBorderColorArray, width / 2f, height / 2f)
             )
         } else {
             canvas.drawCircle(
                 width / 2f,
                 height / 2f,
                 width / 2f - avatarBorderWidth / 2,
-                borderPaint
+                borderPaint.applyGradientShader(avatarBorderColorArray, width / 2f, height / 2f)
             )
         }
     }
@@ -383,11 +399,29 @@ public class AvatarView @JvmOverloads constructor(
                     IndicatorPosition.BOTTOM_RIGHT,
                     -> height - height / indicatorSizeCriteria
                 }
-                canvas.drawCircle(cx, cy, width / indicatorSizeCriteria, indicatorOutlinePaint)
+                canvas.drawCircle(
+                    cx,
+                    cy,
+                    width / indicatorSizeCriteria,
+                    indicatorOutlinePaint.applyGradientShader(indicatorBorderColorArray, cx, cy)
+                )
                 canvas.drawCircle(cx, cy, width / indicatorBorderSizeCriteria, indicatorPaint)
             }
         }
     }
+
+    /** Apply gradient shader to a [Paint]. */
+    private fun Paint.applyGradientShader(colorArray: IntArray, cx: Float, cy: Float): Paint =
+        apply {
+            if (colorArray.isNotEmpty()) {
+                shader = SweepGradient(
+                    cx,
+                    cy,
+                    colorArray,
+                    colorArray.arrayPositions
+                )
+            }
+        }
 
     public fun setIndicatorRes(@DrawableRes drawableRes: Int) {
         indicatorDrawable = ResourcesCompat.getDrawable(resources, drawableRes, null)
