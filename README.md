@@ -236,7 +236,7 @@ You can set the shape as a circle by setting the `avatarViewShape` attribute to 
 
 ### Rounded Rect
 
-You can set the shape as a rounded rect by setting the `avatarViewShape` attribute to `rounded_rect`. Also, you can customize a radious of the border with an `avatarViewBorderRadius` attribute.
+You can set the shape as a rounded rect by setting the `avatarViewShape` attribute to `rounded_rect`. Also, you can customize a radius of the border with an `avatarViewBorderRadius` attribute.
 
 ```gradle
 <io.getstream.avatarview.AvatarView
