@@ -43,6 +43,8 @@
         <attr name="avatarViewIndicatorColor" format="color|reference" />
         <!-- Border color of the indicator -->
         <attr name="avatarViewIndicatorBorderColor" format="color|reference" />
+        <!-- Border color of the indicator array -->
+        <attr name="avatarViewIndicatorBorderColorArray" format="reference" />
         <!-- Size criteria of the indicator -->
         <attr name="avatarViewIndicatorSizeCriteria" format="float" />
         <!-- Border Size criteria of the indicator -->
