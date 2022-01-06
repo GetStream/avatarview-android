@@ -168,7 +168,7 @@ avatarView.errorPlaceholder = drawable
 
 ### Custom ImageRequest
 
-You can customize the [ImageRequest](https://coil-kt.github.io/coil/image_requests/) and provide information to load an image as in the example below:
+You can customize [ImageRequest](https://coil-kt.github.io/coil/image_requests/) and provide information to load an image as in the example below:
 
 ```kotlin
 avatarView.loadImage(
@@ -181,13 +181,104 @@ avatarView.loadImage(
 }
 ```
 
+<img src="/preview/preview9.png" width="32%" align="right"/>
+
+## Border
+You can customize border relevant attributes as in the example below:
+
+```gradle
+<io.getstream.avatarview.AvatarView
+    android:layout_width="110dp"
+    android:layout_height="110dp"
+    app:avatarViewBorderColor="@color/white"
+    app:avatarViewBorderWidth="3dp" />
+```
+
+Also, you can make a gradient for the border with an `avatarViewIndicatorBorderColorArray` attribute. First, define an array of color in you **colors.xml** file as in the example below:
+
+#### colors.xml
+```gradle
+<array name="rainbow">
+    <item>@color/red</item>
+    <item>@color/orange</item>
+    <item>@color/yellow</item>
+    <item>@color/chartreuse</item>
+    <item>@color/green</item>
+</array>    
+```
+
+Next, apply the color array with the `avatarViewBorderColorArray` attribute instread of the `avatarViewBorderColor` as in the below example:
+
+```gradle
+<io.getstream.avatarview.AvatarView
+    android:layout_width="110dp"
+    android:layout_height="110dp"
+    app:avatarViewBorderColorArray="@color/white"
+    app:avatarViewBorderWidth="3dp" />
+```
+
+<img src="/preview/preview8.png" width="32%" align="right"/>
+
+## Shape
+AvatarView supports two shapes; circle and rounded rect. You can customize the shapes as in the example below:
+
+### Circle
+
+You can set the shape as a circle by setting the `avatarViewShape` attribute to `circle`.
+
+```gradle
+<io.getstream.avatarview.AvatarView
+    android:layout_width="110dp"
+    android:layout_height="110dp"
+    app:avatarViewShape="circle" />
+```
+
+### Rounded Rect
+
+You can set the shape as a rounded rect by setting the `avatarViewShape` attribute to `rounded_rect`. Also, you can customize a radious of the border with an `avatarViewBorderRadius` attribute.
+
+```gradle
+<io.getstream.avatarview.AvatarView
+    android:layout_width="110dp"
+    android:layout_height="110dp"
+    app:avatarViewShape="rounded_rect" 
+    app:avatarViewBorderRadius="21dp"
+    />
+```
+
+<img src="/preview/preview10.png" width="32%" align="right"/>
+
+## Indicator
+AvatarView supports drawing an indicator, which can be used for presenting a user online status or badges. You can enable it by giving **true** for an `avatarViewIndicatorEnabled` attribute as in the example below:
+
+```gradle
+<io.getstream.avatarview.AvatarView
+    android:layout_width="110dp"
+    android:layout_height="110dp"
+    app:avatarViewIndicatorEnabled="true"
+    app:avatarViewIndicatorColor="@color/green"
+    app:avatarViewIndicatorBorderColor="@color/white"
+    app:avatarViewIndicatorSizeCriteria="9"
+    app:avatarViewIndicatorBorderSizeCriteria="10"
+    app:avatarViewIndicatorPosition="bottomRight" />
+```
+
+As you can see above, you can customize the color of the indicator and border of the indicator, size criteria, and position. Also, you can customize the whole indicator with your custom drawable resource:
+
+```gradle
+<io.getstream.avatarview.AvatarView
+    android:layout_width="110dp"
+    android:layout_height="110dp"
+    app:avatarViewIndicatorDrawable="@drawable/stream" />
+```
+
 <img src="/preview/preview3.png" width="32%" align="right"/>
 
-## Drawing Initials
+## Initials
 
-`AvatarView` supports drawing up to first two initials.  You can draw and customize initials instead of loading an image on the `AvatarView` as in the example below:
+`AvatarView` supports drawing initials. You can draw and customize initials instead of loading an image over the `AvatarView` as in the example below:
 
-```kotlin
+```gradle
 <io.getstream.avatarview.AvatarView
     android:layout_width="110dp"
     android:layout_height="110dp"
