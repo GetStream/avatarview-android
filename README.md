@@ -1,3 +1,5 @@
+![avatarView](https://user-images.githubusercontent.com/24237865/148317308-8b39adb4-2c24-4094-abb7-8ad808fd1f96.png)
+
 <h1 align="center">AvatarView</h1></br>
 
 <p align="center">
@@ -194,7 +196,7 @@ You can customize border relevant attributes as in the example below:
     app:avatarViewBorderWidth="3dp" />
 ```
 
-Also, you can make a gradient for the border with an `avatarViewIndicatorBorderColorArray` attribute. First, define an array of color in you **colors.xml** file as in the example below:
+Also, you can make a gradient for the border with an `avatarViewIndicatorBorderColorArray` attribute. First, declare an array of color in you **colors.xml** file as in the example below:
 
 #### colors.xml
 ```gradle
@@ -465,13 +467,9 @@ The channel image will be loaded. But if there is no valid channel image, an ima
 Support it by joining __[stargazers](https://github.com/getStream/avatarview-android/stargazers)__ for this repository. :star: <br>
 Also, follow **[Stream](https://twitter.com/getstream_io)** on Twitter for our next creations!
 
-<a href="https://getstream.io/chat/sdk/android/">
-  <img src="https://user-images.githubusercontent.com/24237865/147577438-2d1c3dd2-a3bc-4014-9ec1-6095fbdab194.png" width="100%" />
-</a>
-
 # License
 ```xml
-Copyright 2021 Stream.IO, Inc. All Rights Reserved.
+Copyright 2022 Stream.IO, Inc. All Rights Reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
