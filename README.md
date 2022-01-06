@@ -1,4 +1,4 @@
-![avatarView](https://user-images.githubusercontent.com/24237865/148317308-8b39adb4-2c24-4094-abb7-8ad808fd1f96.png)
+![avatarView](https://user-images.githubusercontent.com/24237865/148317308-8b39adb4-2c24-4094-abb7-8ad808fd1f96.png)<br><br>
 
 <p align="center">
   <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
@@ -8,7 +8,7 @@
 </p><br>
 
 <p align="center">
-AvatarView supports loading profile images with fractional style, borders, indicators, and initials for Android.
+✨ AvatarView supports loading profile images with fractional style, borders, indicators, and initials for Android.
 </p><br>
 
 ## Preview
