@@ -1,6 +1,7 @@
 import io.getstream.avatarview.Dependencies
 
 apply plugin: 'io.github.gradle-nexus.publish-plugin'
+apply plugin: 'org.jetbrains.dokka'
 
 buildscript {
     repositories {
@@ -16,6 +17,11 @@ buildscript {
         classpath Dependencies.dokka
         classpath Dependencies.kotlinBinaryValidator
     }
+}
+
+tasks.withType(org.jetbrains.dokka.gradle.DokkaMultiModuleTask).configureEach {
+    outputDirectory = rootProject.file('docs/api')
+    failOnWarning = true
 }
 
 task clean(type: Delete) {
