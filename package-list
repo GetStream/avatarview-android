@@ -1,0 +1,12 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+module:avatarview
+io.getstream.avatarview
+io.getstream.avatarview.internal
+module:avatarview-coil
+io.getstream.avatarview.coil
+module:avatarview-glide
+io.getstream.avatarview.glide
+module:avatarview-stream-integration
+io.getstream.avatarview.stream.integration
