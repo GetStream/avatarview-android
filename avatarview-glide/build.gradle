@@ -4,6 +4,7 @@ import io.getstream.avatarview.Dependencies
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.dokka'
     id 'binary-compatibility-validator'
     id 'kotlin-kapt'
 }

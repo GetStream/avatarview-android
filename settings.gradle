@@ -16,5 +16,5 @@ rootProject.name = "AvatarView"
 include ':app'
 include ':avatarview'
 include ':avatarview-coil'
-include ':avatarview-stream-integration'
 include ':avatarview-glide'
+include ':avatarview-stream-integration'
