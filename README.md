@@ -435,6 +435,8 @@ The channel image will be loaded. But if there is no valid channel image, an ima
 
 ## AvatarView Attributes
 
+For more details, you can check out the [Dokka-AvatarView](https://getstream.github.io/avatarview-android/avatarview/io.getstream.avatarview/-avatar-view/index.html).
+
 | Attributes                            | Type      | Description                                                  |
 | ------------------------------------- | --------- | ------------------------------------------------------------ |
 | avatarViewBorderColor                 | color     | AvatarView border color                                      |
