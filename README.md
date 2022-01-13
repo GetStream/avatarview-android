@@ -20,7 +20,7 @@
 </p>
 
 ## Download
-[![Maven Central](https://img.shields.io/maven-central/v/io.getstream/avatarview.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.getstream%22%20AND%20a:%22stream-chat-android%22)
+[![Maven Central](https://img.shields.io/maven-central/v/io.getstream/avatarview.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.getstream%22%20AND%20a:%22avatarview%22)
 
 ### Gradle
 Add the below codes to your **root** `build.gradle` file (not your module build.gradle file).
