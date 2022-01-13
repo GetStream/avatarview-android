@@ -34,7 +34,7 @@ allprojects {
 Next, add the below dependency to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
-    implementation "io.getstream:avatarview-coil:1.0.1"
+    implementation "io.getstream:avatarview-coil:1.0.2"
 }
 ```
 
@@ -60,8 +60,8 @@ repositories {
 Next, add the below dependency to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
-    implementation "io.getstream:avatarview-coil:1.0.1-SNAPSHOT"
-    implementation "io.getstream:avatarview-glide:1.0.1-SNAPSHOT"
+    implementation "io.getstream:avatarview-coil:1.0.3-SNAPSHOT"
+    implementation "io.getstream:avatarview-glide:1.0.3-SNAPSHOT"
 }
 ```
 
