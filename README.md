@@ -400,7 +400,7 @@ We highly recommend using **AvatarView-Coil** to load images if possible. Howeve
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.getstream/avatarview-stream-integration.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.getstream%22%20AND%20a:%22avatarview-stream-integration%22)
 
-AvatarView supports integrating features with [Stream Chat SDK](https://getstream.io/). First, You can simply integrate with **Stream Chat SDK** by adding the dependency below:
+AvatarView supports integrating features with [Stream Chat SDK](https://getstream.io/chat/sdk/). First, You can simply integrate with **Stream Chat SDK** by adding the dependency below:
 
 ```gradle
 dependencies {
