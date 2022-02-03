@@ -138,7 +138,7 @@ internal inline fun AvatarView.collectAndCombineBitmaps(
     data: List<Any?>,
     crossinline onLoadImage: AvatarView.(Bitmap) -> Unit
 ) {
-    launch {
+    launch(coroutineContext) {
         val avatarResults: ArrayList<AvatarResult> = arrayListOf()
         val avatarResultFlow = AvatarBitmapLoader.loadBitmaps(
             requestManager = Glide.with(this@collectAndCombineBitmaps),

@@ -154,7 +154,7 @@ public class AvatarView @JvmOverloads constructor(
     /** Internal coroutine scope for AvatarView. */
     @property:InternalAvatarViewApi
     public override val coroutineContext: CoroutineContext =
-        SupervisorJob() + Dispatchers.Main.immediate
+        SupervisorJob() + Dispatchers.Main
 
     init {
         initAttributes(attrs, defStyleAttr)
