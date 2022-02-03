@@ -32,7 +32,6 @@ import com.bumptech.glide.request.transition.DrawableCrossFadeFactory
 import io.getstream.avatarview.AvatarBitmapCombiner
 import io.getstream.avatarview.AvatarShape
 import io.getstream.avatarview.AvatarView
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -139,7 +138,7 @@ internal inline fun AvatarView.collectAndCombineBitmaps(
     data: List<Any?>,
     crossinline onLoadImage: AvatarView.(Bitmap) -> Unit
 ) {
-    launch(Dispatchers.Main) {
+    launch(coroutineContext) {
         val avatarResults: ArrayList<AvatarResult> = arrayListOf()
         val avatarResultFlow = AvatarBitmapLoader.loadBitmaps(
             requestManager = Glide.with(this@collectAndCombineBitmaps),
