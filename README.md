@@ -142,7 +142,7 @@ The default value is 4, and you can set the fractional formats to your taste.
 
 ### Loading Placeholder
 
-We can set a placeholder to show a placeholder when loading an image as in the example below:
+We can set a placeholder to show a placeholder during loading an image as in the example below:
 
 ```xml
 app:avatarViewPlaceholder="@drawable/stream"
