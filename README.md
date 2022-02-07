@@ -140,7 +140,7 @@ The default value is 4, and you can set the fractional formats to your taste.
 
 <img src="/preview/preview5.png" width="32%" align="right"/>
 
-### PlaceHolder
+### Loading Placeholder
 
 We can set a placeholder to show a placeholder when loading an image as in the example below:
 
@@ -155,7 +155,7 @@ avatarView.placeholder = drawable
 
 <img src="/preview/preview4.png" width="32%" align="right"/>
 
-### ErrorPlaceHolder
+### Error Placeholder
 
 We can set an error placeholder to show a placeholder when the request failed as in the example below:
 
