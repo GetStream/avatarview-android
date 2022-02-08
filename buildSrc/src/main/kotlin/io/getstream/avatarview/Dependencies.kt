@@ -1,7 +1,7 @@
 package io.getstream.avatarview
 
 object Versions {
-    internal const val ANDROID_GRADLE_PLUGIN = "7.1.0-rc01"
+    internal const val ANDROID_GRADLE_PLUGIN = "7.1.0"
     internal const val ANDROID_GRADLE_SPOTLESS = "6.1.0"
     internal const val GRADLE_NEXUS_PUBLISH_PLUGIN = "1.1.0"
     internal const val KOTLIN = "1.6.0"
@@ -15,7 +15,7 @@ object Versions {
 
     internal const val OKHTTP = "4.9.2"
     internal const val COIL = "1.4.0"
-    internal const val GLIDE = "4.12.0"
+    internal const val GLIDE = "4.13.0"
 
     internal const val STREAM_CHAT_SDK = "4.27.0"
 
@@ -45,7 +45,6 @@ object Dependencies {
     const val coilGif = "io.coil-kt:coil-gif:${Versions.COIL}"
 
     const val glide = "com.github.bumptech.glide:glide:${Versions.GLIDE}"
-    const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.GLIDE}"
 
     const val streamChatSdk = "io.getstream:stream-chat-android-client:${Versions.STREAM_CHAT_SDK}"
 
