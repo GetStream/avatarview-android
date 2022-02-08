@@ -61,7 +61,6 @@ apiValidation {
 dependencies {
     api project(":avatarview")
     api Dependencies.glide
-    kapt Dependencies.glideCompiler
 
     implementation Dependencies.androidxAppcompat
     implementation Dependencies.coroutines
