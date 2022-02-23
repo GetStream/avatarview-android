@@ -19,6 +19,14 @@
 <img src="https://user-images.githubusercontent.com/24237865/146585501-889b031c-55d1-4822-9d25-1d2c8ff8bd67.png" width="32.3%"/>
 </p>
 
+<a href="https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook"><img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="13%"/></a>
+
+## Contribution 💙
+
+AvatarView is maintained by __[Stream](https://getstream.io/)__.
+If you’re interested in adding powerful In-App Messaging to your app, check out the __[Stream Chat SDK for Android](https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=avatarview-android)__!
+Also, anyone can contribute to improving code, docs, or something following our [Contributing Guideline](/CONTRIBUTING.md).
+
 ## Download
 [![Maven Central](https://img.shields.io/maven-central/v/io.getstream/avatarview.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.getstream%22%20AND%20a:%22avatarview%22)
 
@@ -462,7 +470,7 @@ For more details, you can check out the [Dokka-AvatarView](https://getstream.git
 | avatarViewPlaceholder                 | drawable  | A placeholder that should be shown when loading an image     |
 | avatarViewErrorPlaceholder            | drawable  | An error placeholder that should be shown when request failed |
 
- <a href="https://getstream.io/tutorials/android-chat/"><img src="https://user-images.githubusercontent.com/24237865/146505581-a79e8f7d-6eda-4611-b41a-d60f0189e7d4.jpeg" align="right" /></a>
+ <a href="https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=avatarview-android"><img src="https://user-images.githubusercontent.com/24237865/146505581-a79e8f7d-6eda-4611-b41a-d60f0189e7d4.jpeg" align="right" /></a>
 
 ## Find this library useful? :heart:
 
