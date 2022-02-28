@@ -1,4 +1,4 @@
-![avatarView](https://user-images.githubusercontent.com/24237865/148317308-8b39adb4-2c24-4094-abb7-8ad808fd1f96.png)<br><br>
+<a href="https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=avatarview-android"><img src="https://user-images.githubusercontent.com/24237865/148317308-8b39adb4-2c24-4094-abb7-8ad808fd1f96.png" /></a><br><br>
 
 <p align="center">
   <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
