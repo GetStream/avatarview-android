@@ -32,68 +32,13 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        with(binding) {
-            avatarView1.loadImage(cats.take(1))
-
-            avatarView2.loadImage(
-                cats.take(2)
-            ) {
-                crossfade(true)
-                crossfade(300)
-                lifecycle(this@MainActivity)
-            }
-
-            avatarView3.loadImage(
-                cats.take(3)
-            ) {
-                crossfade(true)
-                crossfade(400)
-                lifecycle(this@MainActivity)
-            }
-
-            avatarView4.loadImage(
-                cats.take(4)
-            ) {
-                crossfade(true)
-                crossfade(400)
-                lifecycle(this@MainActivity)
-            }
-
-            avatarView5.loadImage(
-                cats.take(1)
-            ) {
-                crossfade(true)
-                crossfade(400)
-                lifecycle(this@MainActivity)
-            }
-
-            avatarView6.loadImage(
-                cats.take(2)
-            ) {
-                crossfade(true)
-                crossfade(400)
-                lifecycle(this@MainActivity)
-            }
-
-            avatarView7.loadImage(
-                cats.take(3)
-            ) {
-                crossfade(true)
-                crossfade(400)
-                lifecycle(this@MainActivity)
-                transformations(
-                    BlurTransformation(this@MainActivity),
-                    RoundedCornersTransformation(36f)
-                )
-            }
-
-            avatarView8.loadImage(
-                cats.take(4)
-            ) {
-                crossfade(true)
-                crossfade(400)
-                lifecycle(this@MainActivity)
-            }
+        val catlist = mutableListOf<MainCat>()
+        for (i in 0..30) {
+            val cat = MainCat(cats.first(), "cat: $i")
+            catlist.add(cat)
         }
+
+        val adapter = MainAdapter(catlist)
+        binding.recyclerView.adapter = adapter
     }
 }
