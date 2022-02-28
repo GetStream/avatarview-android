@@ -24,7 +24,7 @@
 ## Contribution 💙
 
 AvatarView is maintained by __[Stream](https://getstream.io/)__.
-If you’re interested in adding powerful In-App Messaging to your app, check out the __[Stream Chat SDK for Android](https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=avatarview-android)__!
+If you’re interested in adding powerful In-App Messaging to your app, check out the __[Stream Chat Tutorial for Android](https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=avatarview-android)__!
 Also, anyone can contribute to improving code, docs, or something following our [Contributing Guideline](/CONTRIBUTING.md).
 
 ## Blog Posts
