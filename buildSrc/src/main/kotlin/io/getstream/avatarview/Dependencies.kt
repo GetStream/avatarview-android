@@ -1,8 +1,8 @@
 package io.getstream.avatarview
 
 object Versions {
-    internal const val ANDROID_GRADLE_PLUGIN = "7.1.0"
-    internal const val ANDROID_GRADLE_SPOTLESS = "6.1.0"
+    internal const val ANDROID_GRADLE_PLUGIN = "7.1.2"
+    internal const val ANDROID_GRADLE_SPOTLESS = "6.2.1"
     internal const val GRADLE_NEXUS_PUBLISH_PLUGIN = "1.1.0"
     internal const val KOTLIN = "1.6.0"
     public const val KOTLIN_GRADLE_KTLINT = "0.41.0"
@@ -17,7 +17,7 @@ object Versions {
     internal const val COIL = "1.4.0"
     internal const val GLIDE = "4.13.0"
 
-    internal const val STREAM_CHAT_SDK = "4.27.0"
+    internal const val STREAM_CHAT_SDK = "4.30.1"
 
     internal const val CONSTRAINT_LAYOUT = "2.1.2"
     internal const val MATERIAL = "1.5.0-beta01"
