@@ -1,4 +1,4 @@
-![avatarView](https://user-images.githubusercontent.com/24237865/148317308-8b39adb4-2c24-4094-abb7-8ad808fd1f96.png)<br><br>
+<a href="https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=avatarview-android"><img src="https://user-images.githubusercontent.com/24237865/148317308-8b39adb4-2c24-4094-abb7-8ad808fd1f96.png" /></a><br><br>
 
 <p align="center">
   <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
@@ -24,8 +24,12 @@
 ## Contribution 💙
 
 AvatarView is maintained by __[Stream](https://getstream.io/)__.
-If you’re interested in adding powerful In-App Messaging to your app, check out the __[Stream Chat SDK for Android](https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=avatarview-android)__!
+If you’re interested in adding powerful In-App Messaging to your app, check out the __[Stream Chat Tutorial for Android](https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=avatarview-android)__!
 Also, anyone can contribute to improving code, docs, or something following our [Contributing Guideline](/CONTRIBUTING.md).
+
+## Blog Posts
+Learn how to create stylish, highly-customized profile images using AvatarView for Android.
+- __[AvatarView for Android: Take Your Profile Images to the Next Level](https://getstream.io/blog/avatarview-android/)__
 
 ## Download
 [![Maven Central](https://img.shields.io/maven-central/v/io.getstream/avatarview.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.getstream%22%20AND%20a:%22avatarview%22)
