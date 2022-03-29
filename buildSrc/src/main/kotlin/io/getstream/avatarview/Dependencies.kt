@@ -4,7 +4,7 @@ object Versions {
     internal const val ANDROID_GRADLE_PLUGIN = "7.1.2"
     internal const val ANDROID_GRADLE_SPOTLESS = "6.2.1"
     internal const val GRADLE_NEXUS_PUBLISH_PLUGIN = "1.1.0"
-    internal const val KOTLIN = "1.6.0"
+    internal const val KOTLIN = "1.6.10"
     public const val KOTLIN_GRADLE_KTLINT = "0.41.0"
     internal const val KOTLIN_GRADLE_DOKKA = "1.6.10"
     internal const val KOTLIN_BINARY_VALIDATOR = "0.8.0"
@@ -20,7 +20,7 @@ object Versions {
     internal const val STREAM_CHAT_SDK = "5.0.1"
 
     internal const val CONSTRAINT_LAYOUT = "2.1.2"
-    internal const val MATERIAL = "1.5.0-beta01"
+    internal const val MATERIAL = "1.5.0"
 }
 
 object Dependencies {
