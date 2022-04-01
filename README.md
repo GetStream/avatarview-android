@@ -46,7 +46,7 @@ allprojects {
 Next, add the below dependency to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
-    implementation "io.getstream:avatarview-coil:1.0.3"
+    implementation "io.getstream:avatarview-coil:1.0.4"
 }
 ```
 
@@ -54,7 +54,7 @@ dependencies {
 
 We highly recommend using **AvatarView-Coil** to load images. However, if you'd more prefer to use [Glide](https://github.com/bumptech/glide), you can use [AvatarView-Glide](/avatarview-glide/README.md) instead.
 
-## SNAPSHOT 
+## SNAPSHOT
 
 <details>
  <summary>See how to import the snapshot</summary>
@@ -72,8 +72,8 @@ repositories {
 Next, add the below dependency to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
-    implementation "io.getstream:avatarview-coil:1.0.3-SNAPSHOT"
-    implementation "io.getstream:avatarview-glide:1.0.3-SNAPSHOT"
+    implementation "io.getstream:avatarview-coil:1.0.5-SNAPSHOT"
+    implementation "io.getstream:avatarview-glide:1.0.5-SNAPSHOT"
 }
 ```
 
@@ -89,7 +89,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 
 ### **AvatarView** in XML layout
 
-You can customize `AvatarView` in your XML layout by setting attributes. 
+You can customize `AvatarView` in your XML layout by setting attributes.
 
 ```gradle
 <io.getstream.avatarview.AvatarView
@@ -138,7 +138,7 @@ avatarView.loadImage(
 
 ```kotlin
 avatarView.loadImage(
-  data = listof(url1, url2, url3, url4) 
+  data = listof(url1, url2, url3, url4)
 )
 ```
 
@@ -218,7 +218,7 @@ Also, you can make a gradient for the border with an `avatarViewIndicatorBorderC
     <item>@color/yellow</item>
     <item>@color/chartreuse</item>
     <item>@color/green</item>
-</array>    
+</array>
 ```
 
 Next, apply the color array with the `avatarViewBorderColorArray` attribute instread of the `avatarViewBorderColor` as in the below example:
@@ -255,7 +255,7 @@ You can set the shape as a rounded rect by setting the `avatarViewShape` attribu
 <io.getstream.avatarview.AvatarView
     android:layout_width="110dp"
     android:layout_height="110dp"
-    app:avatarViewShape="rounded_rect" 
+    app:avatarViewShape="rounded_rect"
     app:avatarViewBorderRadius="21dp"
     />
 ```
