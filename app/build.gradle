@@ -37,7 +37,6 @@ android {
 
 dependencies {
     implementation Dependencies.material
-    implementation Dependencies.constraintLayout
     implementation project(":avatarview-coil")
     implementation project(":avatarview-glide")
     implementation project(":avatarview-stream-integration")
