@@ -17,7 +17,7 @@ object Versions {
     internal const val COIL = "1.4.0"
     internal const val GLIDE = "4.13.0"
 
-    internal const val STREAM_CHAT_SDK = "5.0.2"
+    internal const val STREAM_CHAT_SDK = "5.1.0"
 }
 
 object Dependencies {
