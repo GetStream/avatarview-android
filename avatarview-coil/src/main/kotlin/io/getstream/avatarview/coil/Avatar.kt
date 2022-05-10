@@ -20,8 +20,9 @@ import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import androidx.annotation.DrawableRes
+import coil.request.ErrorResult
 import coil.request.ImageRequest
-import coil.request.ImageResult
+import coil.request.SuccessResult
 import okhttp3.HttpUrl
 import java.io.File
 
@@ -58,10 +59,10 @@ public data class Avatar(
     val errorPlaceholder: Drawable?,
 
     /** A lambda function will be executed when loading succeeds. */
-    val onSuccess: (request: ImageRequest, metadata: ImageResult.Metadata) -> Unit,
+    val onSuccess: (request: ImageRequest, result: SuccessResult) -> Unit,
 
     /** A lambda function will be executed when loading failed. */
-    val onError: (request: ImageRequest, throwable: Throwable) -> Unit,
+    val onError: (request: ImageRequest, result: ErrorResult) -> Unit,
 ) {
     private val bagOfTags: MutableMap<String, Any> = mutableMapOf()
 

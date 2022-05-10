@@ -18,14 +18,12 @@ package io.getstream.avatarview.coil
 
 import android.content.Context
 import android.graphics.drawable.BitmapDrawable
-import coil.bitmap.BitmapPool
+import coil.ImageLoader
 import coil.decode.DataSource
-import coil.decode.Options
 import coil.fetch.DrawableResult
-import coil.fetch.FetchResult
 import coil.fetch.Fetcher
-import coil.size.PixelSize
-import coil.size.Size
+import coil.request.Options
+import coil.size.pxOrElse
 
 /**
  * An image request fetcher of [Avatar] data type.
@@ -34,30 +32,23 @@ import coil.size.Size
  */
 internal class AvatarFetcher constructor(
     private val context: Context
-) : Fetcher<Avatar> {
+) : Fetcher.Factory<Avatar> {
 
-    override suspend fun fetch(
-        pool: BitmapPool,
-        data: Avatar,
-        size: Size,
-        options: Options
-    ): FetchResult {
-        val targetSize = size.let { if (it is PixelSize) it.width else 0 }
+    override fun create(data: Avatar, options: Options, imageLoader: ImageLoader): Fetcher {
+        val targetSize = options.size.width.pxOrElse { 0 }
         val resources = options.context.resources
-        return DrawableResult(
-            BitmapDrawable(
-                resources,
-                AvatarCoil.getAvatarBitmapFactory(context).createAvatarBitmaps(
-                    data,
-                    targetSize - data.avatarBorderWidth * 2
-                )
-            ),
-            false,
-            DataSource.MEMORY
-        )
-    }
-
-    override fun key(data: Avatar): String? {
-        return AvatarCoil.getAvatarBitmapFactory(context).avatarBitmapKey(data)
+        return Fetcher {
+            DrawableResult(
+                BitmapDrawable(
+                    resources,
+                    AvatarCoil.getAvatarBitmapFactory(context).createAvatarBitmaps(
+                        data,
+                        targetSize - data.avatarBorderWidth * 2
+                    )
+                ),
+                false,
+                DataSource.MEMORY
+            )
+        }
     }
 }

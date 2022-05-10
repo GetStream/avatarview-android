@@ -19,8 +19,9 @@
 
 package io.getstream.avatarview.coil
 
+import coil.request.ErrorResult
 import coil.request.ImageRequest
-import coil.request.ImageResult
+import coil.request.SuccessResult
 import coil.transform.CircleCropTransformation
 import coil.transform.RoundedCornersTransformation
 import coil.transform.Transformation
@@ -38,12 +39,12 @@ import io.getstream.avatarview.AvatarView
  * @param builder A receiver to be applied with the [ImageRequest.Builder].
  */
 @JvmSynthetic
-public inline fun AvatarView.loadImage(
+public fun AvatarView.loadImage(
     data: Any?,
-    crossinline onStart: () -> Unit = {},
-    crossinline onComplete: () -> Unit = {},
-    noinline onSuccess: (request: ImageRequest, metadata: ImageResult.Metadata) -> Unit = { _, _ -> },
-    noinline onError: (request: ImageRequest, throwable: Throwable) -> Unit = { _, _ -> },
+    onStart: () -> Unit = {},
+    onComplete: () -> Unit = {},
+    onSuccess: (request: ImageRequest, result: SuccessResult) -> Unit = { _, _ -> },
+    onError: (request: ImageRequest, result: ErrorResult) -> Unit = { _, _ -> },
     builder: ImageRequest.Builder.() -> Unit = {}
 ) {
     loadPlaceholder()
@@ -76,12 +77,12 @@ public inline fun AvatarView.loadImage(
  * @param builder A receiver to be applied with the [ImageRequest.Builder].
  */
 @JvmSynthetic
-public inline fun AvatarView.loadImage(
+public fun AvatarView.loadImage(
     data: List<Any?>,
-    crossinline onStart: () -> Unit = {},
-    crossinline onComplete: () -> Unit = {},
-    noinline onSuccess: (request: ImageRequest, metadata: ImageResult.Metadata) -> Unit = { _, _ -> },
-    noinline onError: (request: ImageRequest, throwable: Throwable) -> Unit = { _, _ -> },
+    onStart: () -> Unit = {},
+    onComplete: () -> Unit = {},
+    onSuccess: (request: ImageRequest, result: SuccessResult) -> Unit = { _, _ -> },
+    onError: (request: ImageRequest, result: ErrorResult) -> Unit = { _, _ -> },
     builder: ImageRequest.Builder.() -> Unit = {}
 ) {
     loadPlaceholder()
@@ -114,12 +115,12 @@ public inline fun AvatarView.loadImage(
  * @param builder A receiver to be applied with the [ImageRequest.Builder].
  */
 @JvmSynthetic
-public inline fun AvatarView.loadImage(
+public fun AvatarView.loadImage(
     vararg data: Any?,
-    crossinline onStart: () -> Unit = {},
-    crossinline onComplete: () -> Unit = {},
-    noinline onSuccess: (request: ImageRequest, metadata: ImageResult.Metadata) -> Unit = { _, _ -> },
-    noinline onError: (request: ImageRequest, throwable: Throwable) -> Unit = { _, _ -> },
+    onStart: () -> Unit = {},
+    onComplete: () -> Unit = {},
+    onSuccess: (request: ImageRequest, result: SuccessResult) -> Unit = { _, _ -> },
+    onError: (request: ImageRequest, result: ErrorResult) -> Unit = { _, _ -> },
     builder: ImageRequest.Builder.() -> Unit = {}
 ) {
     loadPlaceholder()

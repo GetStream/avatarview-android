@@ -18,7 +18,6 @@ package io.getstream.avatarviewdemo
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import coil.transform.BlurTransformation
 import coil.transform.RoundedCornersTransformation
 import io.getstream.avatarview.coil.loadImage
 import io.getstream.avatarviewdemo.Samples.cats
@@ -82,7 +81,6 @@ class MainActivity : AppCompatActivity() {
                 crossfade(400)
                 lifecycle(this@MainActivity)
                 transformations(
-                    BlurTransformation(this@MainActivity),
                     RoundedCornersTransformation(36f)
                 )
             }
