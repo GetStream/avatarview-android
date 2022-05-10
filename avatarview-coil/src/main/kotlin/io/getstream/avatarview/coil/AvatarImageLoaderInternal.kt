@@ -19,9 +19,10 @@ package io.getstream.avatarview.coil
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
-import coil.loadAny
+import coil.load
+import coil.request.ErrorResult
 import coil.request.ImageRequest
-import coil.request.ImageResult
+import coil.request.SuccessResult
 import coil.transform.CircleCropTransformation
 import coil.transform.Transformation
 import io.getstream.avatarview.AvatarView
@@ -52,8 +53,8 @@ public object AvatarImageLoaderInternal {
     public suspend fun loadAsBitmap(
         context: Context,
         data: Any?,
-        onSuccess: (request: ImageRequest, metadata: ImageResult.Metadata) -> Unit = { _, _ -> },
-        onError: (request: ImageRequest, throwable: Throwable) -> Unit = { _, _ -> },
+        onSuccess: (request: ImageRequest, result: SuccessResult) -> Unit = { _, _ -> },
+        onError: (request: ImageRequest, result: ErrorResult) -> Unit = { _, _ -> },
     ): Bitmap? = withContext(Dispatchers.IO) {
         val imageResult = context.avatarImageLoader.execute(
             ImageRequest.Builder(context)
@@ -77,16 +78,16 @@ public object AvatarImageLoaderInternal {
      */
     @JvmSynthetic
     @PublishedApi
-    internal inline fun load(
+    internal fun load(
         target: AvatarView,
         data: Any?,
         transformation: Transformation = CircleCropTransformation(),
-        crossinline onStart: () -> Unit,
-        crossinline onComplete: () -> Unit,
+        onStart: () -> Unit,
+        onComplete: () -> Unit,
         builder: ImageRequest.Builder.() -> Unit
     ) {
         val context = target.context
-        target.loadAny(data, context.avatarImageLoader) {
+        target.load(data, context.avatarImageLoader) {
             headers(AvatarCoil.imageHeadersProvider.getImageRequestHeaders().toHeaders())
             transformations(transformation)
             listener(

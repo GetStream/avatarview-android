@@ -22,8 +22,6 @@ import coil.ImageLoader
 import coil.ImageLoaderFactory
 import coil.decode.GifDecoder
 import coil.decode.ImageDecoderDecoder
-import coil.util.CoilUtils
-import okhttp3.OkHttpClient
 
 /**
  * An [ImageLoader] factory to provide an instance of the [ImageLoader].
@@ -39,19 +37,13 @@ public class AvatarImageLoaderFactory(
     /** Creates a new [ImageLoader] to load [Avatar] image data. */
     override fun newImageLoader(): ImageLoader {
         return ImageLoader.Builder(context)
-            .availableMemoryPercentage(0.25)
             .allowHardware(false)
             .crossfade(true)
-            .okHttpClient {
-                OkHttpClient.Builder()
-                    .cache(CoilUtils.createDefaultCache(context))
-                    .build()
-            }
-            .componentRegistry {
+            .components {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                    add(ImageDecoderDecoder(context))
+                    add(ImageDecoderDecoder.Factory())
                 } else {
-                    add(GifDecoder())
+                    add(GifDecoder.Factory())
                 }
                 add(AvatarFetcher(context))
             }

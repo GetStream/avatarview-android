@@ -287,7 +287,7 @@ public class AvatarView @JvmOverloads constructor(
         textPaint.color = avatarInitialsTextColor
         textPaint.typeface = Typeface.defaultFromStyle(avatarInitialsStyle)
         textPaint.textSize = avatarInitialsTextSize.takeIf { it != -1 }?.toFloat()
-            ?: avatarInitialsTextSizeRatio * width
+            ?: (avatarInitialsTextSizeRatio * width)
     }
 
     /** Draws a border to [AvatarView]. */
