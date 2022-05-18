@@ -42,4 +42,3 @@ dependencies {
     implementation project(":avatarview-stream-integration")
 }
 
-apply from: "$rootDir/spotless.gradle"
