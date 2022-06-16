@@ -62,4 +62,3 @@ dependencies {
     implementation Dependencies.coroutines
 }
 
-apply from: "$rootDir/spotless.gradle"
