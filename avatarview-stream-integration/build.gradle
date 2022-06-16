@@ -64,3 +64,5 @@ dependencies {
 
     implementation Dependencies.androidxAppcompat
 }
+
+apply from: "$rootDir/spotless.gradle"

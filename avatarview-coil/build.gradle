@@ -65,3 +65,5 @@ dependencies {
     implementation Dependencies.coroutines
     implementation Dependencies.okhttp
 }
+
+apply from: "$rootDir/spotless.gradle"
