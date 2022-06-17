@@ -24,6 +24,10 @@ tasks.withType(org.jetbrains.dokka.gradle.DokkaMultiModuleTask).configureEach {
     failOnWarning = true
 }
 
+subprojects {
+    apply from: "$rootDir/spotless/spotless.gradle"
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

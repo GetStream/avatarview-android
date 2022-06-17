@@ -29,6 +29,10 @@ android {
 
     resourcePrefix 'avatarview'
 
+    buildFeatures {
+        buildConfig false
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -61,4 +65,3 @@ dependencies {
     implementation Dependencies.androidxAppcompat
 }
 
-apply from: "$rootDir/spotless.gradle"

@@ -1,0 +1,18 @@
+apply plugin: "com.diffplug.spotless"
+
+spotless {
+    kotlin {
+        target "**/*.kt"
+        targetExclude "**/build/**/*.kt"
+        ktlint()
+        licenseHeaderFile "$rootDir/spotless/copyright.kt"
+        trimTrailingWhitespace()
+        endWithNewline()
+    }
+
+    format "xml", {
+        target "**/*.xml"
+        targetExclude "**/build/**/*.xml"
+        licenseHeaderFile "$rootDir/spotless/copyright.xml", "(<[^!?])"
+    }
+}
