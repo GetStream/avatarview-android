@@ -50,7 +50,7 @@ dependencies {
 }
 ```
 
->  **Note:** The `io.getstream.avatarview-coil` dependency includes [Coil](https://github.com/coil-kt/coil) to load images internally. So if you're using Coil in your project, please make sure your project is using the same Coil version or exclude Coil dependencies to adapt yours.
+> **Note**: The `io.getstream.avatarview-coil` dependency includes [Coil](https://github.com/coil-kt/coil) to load images internally. So if you're using Coil in your project, please make sure your project is using the same Coil version or exclude Coil dependencies to adapt yours.
 
 We highly recommend using **AvatarView-Coil** to load images. However, if you'd more prefer to use [Glide](https://github.com/bumptech/glide), you can use [AvatarView-Glide](/avatarview-glide/README.md) instead.
 
@@ -332,7 +332,7 @@ AvatarCoil.setImageLoader(
 
 Avatar bitmaps are created by the internal bitmap factory called `AvatarBitmapFactory`. However, you can override the image loading methods and provide your own bitmap loader like the example below:
 
-> Note: The `loadAvatarBitmapBlocking` method takes precedence over this one if both are implemented.
+> **Note**: The `loadAvatarBitmapBlocking` method takes precedence over this one if both are implemented.
 
 ```kotlin
 AvatarCoil.setAvatarBitmapFactory(
@@ -368,7 +368,7 @@ AvatarCoil.setAvatarBitmapFactory(
 
 Basically, you can draw your placeholder drawable by setting the `placeholder` property on the `AvatarView`. However, you can provide your own bitmap loader by overriding the `loadAvatarPlaceholderBitmap` method like the example below:
 
-> Note: The `loadAvatarPlaceholderBitmap` will be executed if the previous image request failed. And the `loadAvatarPlaceholderBitmapBlocking` method takes precedence over this one if both are implemented.
+> **Note**: The `loadAvatarPlaceholderBitmap` will be executed if the previous image request failed. And the `loadAvatarPlaceholderBitmapBlocking` method takes precedence over this one if both are implemented.
 
 ```kotlin
 AvatarCoil.setAvatarBitmapFactory(
