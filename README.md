@@ -14,9 +14,9 @@
 
 ## Preview
 <p align="center">
-<img src="/preview/preview7.gif" width="277"/>
-<img src="https://user-images.githubusercontent.com/24237865/146585515-a10a7446-fa47-4e34-9813-89b14177793d.png" width="280"/>
-<img src="https://user-images.githubusercontent.com/24237865/146585501-889b031c-55d1-4822-9d25-1d2c8ff8bd67.png" width="280"/>
+<img src="/preview/preview7.gif" width="267"/>
+<img src="https://user-images.githubusercontent.com/24237865/146585515-a10a7446-fa47-4e34-9813-89b14177793d.png" width="270"/>
+<img src="https://user-images.githubusercontent.com/24237865/146585501-889b031c-55d1-4822-9d25-1d2c8ff8bd67.png" width="270"/>
 </p>
 
 <a href="https://getstream.io/tutorials/android-chat/?utm_source=Github&utm_campaign=Devrel_oss&utm_medium=sketchbook"><img src="https://user-images.githubusercontent.com/24237865/138428440-b92e5fb7-89f8-41aa-96b1-71a5486c5849.png" align="right" width="13%"/></a>
