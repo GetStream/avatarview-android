@@ -46,7 +46,7 @@ allprojects {
 Next, add the below dependency to your **module**'s `build.gradle` file.
 ```gradle
 dependencies {
-    implementation "io.getstream:avatarview-coil:1.0.6"
+    implementation "io.getstream:avatarview-coil:1.0.7"
 }
 ```
 
