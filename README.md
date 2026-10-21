@@ -412,6 +412,8 @@ We highly recommend using **AvatarView-Coil** to load images if possible. Howeve
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.getstream/avatarview-stream-integration.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.getstream%22%20AND%20a:%22avatarview-stream-integration%22)
 
+> **Note**: `avatarview-stream-integration` 1.0.7, the latest release (October 2022), is built on Stream Chat Android 5.11.1 and hasn't been updated for Chat 6 or 7. It may not work in a project on a current Stream Chat version. The Stream Chat Android SDK has its own avatar components; see [the Android Compose chat tutorial](https://getstream.io/chat/sdk/android/tutorial/compose/).
+
 AvatarView supports integrating features with [Stream Chat SDK for Android](https://getstream.io/chat/sdk/android/). First, You can simply integrate with **Stream Chat SDK** by adding the dependency below:
 
 ```gradle
